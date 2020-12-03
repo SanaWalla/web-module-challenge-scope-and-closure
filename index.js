@@ -28,7 +28,7 @@ console.log(processFirstItem(['foo', 'bar'], function (str) { return str + str }
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
-  counter 1 utilizes a higher order function and a callback to incremement the count. 
+  Counter 2 has the variable 'count' avaiable at the global level. 
   
   2. Which of the two uses a closure? How can you tell?
   Counter1 uses a closure. It has a nested function with a parent-child relationship.
@@ -160,14 +160,14 @@ Use the scoreboard function below to do the following:
   */
 
 function scoreboard(getInningScoreCB, inningCB, num) {
-  let homeScore = 0
-  let awayScore = 0
   let array = [];
   let currentScore = getInningScoreCB(inningCB)
   for (let i = 0; i < num; i++) {
     array.push(`Inning ${i + 1}: Away ${currentScore.Away} - Home ${currentScore.Home}`)
   }
 
+  let homeScore = 0
+  let awayScore = 0
   for (let i = 0; i < num; i++) {
     homeScore = homeScore + currentScore.Home
     awayScore = awayScore + currentScore.Away

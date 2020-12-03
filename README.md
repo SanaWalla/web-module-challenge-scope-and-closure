@@ -43,6 +43,7 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+A function and its lexical environment. 
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -64,9 +65,11 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+Closure is the nested function being closed within its parent function.
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+Both times will display the string 'Dan' but will have a different random number generated. 
 c. What is the lexical scope of `newRoll`? 
-
+newRoll is confined to the personalDice function. 
 
 ### Task 3 - Stretch Goals
 
